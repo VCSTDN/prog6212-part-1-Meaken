@@ -1,0 +1,60 @@
+﻿<Window x:Class="ModulesApplication.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="TIME-MANAGEMENT APPLICATION" FontWeight="ExtraBold">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                <GradientStop Color="#FF0000FF" Offset="0" />
+                <GradientStop Color="#FF0000AA" Offset="1" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <StackPanel VerticalAlignment="Center" Margin="20">
+            <!-- Header -->
+            <TextBlock Text="STUDY TIME" Foreground="White" FontSize="40" FontWeight="Bold" HorizontalAlignment="Center"/>
+            <TextBlock Text="PLANNER" Foreground="White" FontSize="25" FontStyle="Italic" HorizontalAlignment="Center"/>
+            <Rectangle Width="Auto" Height="5" Fill="White" HorizontalAlignment="Center"/>
+            <TextBlock Text="MODULE INFORMATION" Foreground="White" FontSize="30" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10"/>
+
+            <!-- Module Information -->
+            <Grid Margin="20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="Module Code:" Foreground="White" FontSize="14" FontWeight="Black" VerticalAlignment="Center"/>
+                <TextBox x:Name="codeTbx" Grid.Row="0" Grid.Column="1" Height="30" Width="210" BorderBrush="White" BorderThickness="3" TextChanged="codeTbx_TextChanged" VerticalAlignment="Center"/>
+
+                <TextBlock Grid.Row="1" Grid.Column="0" Text="Module Name:" Foreground="White" FontSize="14" FontWeight="Black" VerticalAlignment="Center"/>
+                <TextBox x:Name="nameTbx" Grid.Row="1" Grid.Column="1" Height="30" Width="210" BorderBrush="White" BorderThickness="3" TextChanged="nameTbx_TextChanged" VerticalAlignment="Center"/>
+
+                <TextBlock Grid.Row="2" Grid.Column="0" Text="Number of credits:" Foreground="White" FontSize="14" FontWeight="Black" VerticalAlignment="Center"/>
+                <TextBox x:Name="creditsTbx" Grid.Row="2" Grid.Column="1" Height="30" Width="210" BorderBrush="White" BorderThickness="3" TextChanged="creditsTbx_TextChanged" VerticalAlignment="Center"/>
+
+                <TextBlock Grid.Row="3" Grid.Column="0" Text="Class hours per week:" Foreground="White" FontSize="14" FontWeight="Black" VerticalAlignment="Center"/>
+                <TextBox x:Name="classHoursTbx" Grid.Row="3" Grid.Column="1" Height="30" Width="210" BorderBrush="White" BorderThickness="3" TextChanged="classHoursTbx_TextChanged" VerticalAlignment="Center"/>
+
+                <TextBlock Grid.Row="4" Grid.Column="0" Text="Number of weeks:" Foreground="White" FontSize="14" FontWeight="Black" VerticalAlignment="Center"/>
+                <TextBox x:Name="noOfWeeksTbx" Grid.Row="4" Grid.Column="1" Height="30" Width="210" BorderBrush="White" BorderThickness="3" TextChanged="noOfWeeksTbx_TextChanged" VerticalAlignment="Center"/>
+
+                <TextBlock Grid.Row="5" Grid.Column="0" Text="Start date:" Foreground="White" FontSize="14" FontWeight="Black" VerticalAlignment="Center"/>
+                <DatePicker x:Name="startDateBox" Grid.Row="5" Grid.Column="1" Height="30" Width="210" BorderBrush="White" BorderThickness="3" VerticalAlignment="Center"/>
+            </Grid>
+
+            <!-- Buttons -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20">
+                <Button x:Name="addBtn" Background="White" Foreground="Black" BorderBrush="White" BorderThickness="3" Content="Add" Height="50" Width="150" Click="addBtn_Click" Margin="10"/>
+                <Button x:Name="viewBtn" Background="White" Foreground="Black" BorderBrush="White" BorderThickness="3" Content="View" Height="50" Width="150" Click="viewBtn_Click" Margin="10"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
