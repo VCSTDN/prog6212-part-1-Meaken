@@ -29,24 +29,7 @@
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-
-            <!-- Left Column -->
-            <StackPanel Grid.Column="0" Margin="10">
-                <Label Content="Number of hours:" FontSize="14" Foreground="White" FontWeight="Black"/>
-                <TextBox x:Name="hoursWorkedTbx" BorderBrush="White" BorderThickness="3" Height="30" TextChanged="hoursWorkedTbx_TextChanged"/>
-            </StackPanel>
-
-            <!-- Center Column -->
-            <StackPanel Grid.Column="1" Margin="10">
-                <Label Content="Module Code:" FontSize="14" Foreground="White" FontWeight="Black"/>
-                <TextBox x:Name="codeTbx" BorderBrush="White" BorderThickness="3" Height="30" TextChanged="codeTbx_TextChanged"/>
-            </StackPanel>
-
-            <!-- Right Column -->
-            <StackPanel Grid.Column="2" Margin="10">
-                <Label Content="Date:" FontSize="14" Foreground="White" FontWeight="Black"/>
-                <DatePicker x:Name="certainDateBox" Height="30" Width="150" BorderBrush="White" BorderThickness="3"/>
-            </StackPanel>
+     
         </Grid>
 
         <!-- Update Button -->
